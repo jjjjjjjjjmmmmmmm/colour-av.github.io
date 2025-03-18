@@ -1,14 +1,27 @@
 let video;
 let captureButton;
+let videoWidth;
+let videoHeight;
 let avgColor = [255, 255, 255]; // Default white
 let analyzing = false;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-  video = createCapture(VIDEO);
-  video.size(width, height);
-  video.hide();
+  createCanvas(640, 480);
+  video = createCapture(
+    {
+      audio: false,
+      video: {
+        facingMode: "environment",
+      },
+    },
+    function (e) {
+      // we have video
+      console.log(video)
+      videoWidth = video.width;
+      videoHeight = video.height;
+    }
+  );
+  video.hide()
 
   captureButton = createButton("Capture Image");
   captureButton.position(285, 57);
