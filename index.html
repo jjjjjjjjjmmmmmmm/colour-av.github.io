@@ -10,10 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css"> 
 
-  <!-- Load p5.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+  <h1>Colour Average</h1>
 
-  <!-- Load Firebase SDKs (Version 8 for Global Mode) -->
+  <!-- Load p5.js and Firebase SDKs here, just before the closing body tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
@@ -30,9 +32,7 @@
 
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
-  </script>
 
-  <script>
     let video;
     let captureButton;
     let videoWidth;
@@ -51,12 +51,12 @@
         },
         function (e) {
           // we have video
-          console.log(video)
+          console.log(video);
           videoWidth = video.width;
           videoHeight = video.height;
         }
       );
-      video.hide()
+      video.hide();
 
       captureButton = createButton("Capture Image");
       captureButton.position(285, 57);
@@ -109,9 +109,6 @@
       .catch(error => console.error("Error adding document:", error));
     }
   </script>
-</head>
-<body>
-  <h1>Colour Average</h1>
 </body>
 </html>
 
