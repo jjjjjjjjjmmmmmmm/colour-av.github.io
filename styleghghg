@@ -1,0 +1,11 @@
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+  font-family: 'Kanit', sans-serif;
+}
+
+button {
+  font-family: 'Kanit', sans-serif;
+}
