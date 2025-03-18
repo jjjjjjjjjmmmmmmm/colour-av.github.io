@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colour Average</title>
+
+  <!-- Load p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  <!-- Load Firebase SDKs (Version 8 for Global Mode) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script>
+    
+    var firebaseConfig = {
+      apiKey: "AIzaSyBYoOINI0C6KET-BsLSH-7k4-w_DwdcqPk",
+      authDomain: "colour-base.firebaseapp.com",
+      projectId: "colour-base",
+      storageBucket: "colour-base.appspot.com",
+      messagingSenderId: "960380857330",
+      appId: "1:960380857330:web:448de73b75ffe4d4d7196b",
+      measurementId: "G-QHZ0TTPZHT"
+    };
+
+  
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+  </script>
+
+  <!-- Load p5.js sketch -->
+  <script src="sketch.js" defer></script>
+</head>
+<body>
+  <h1>Colour Average</h1>
+</body>
+</html>
+
